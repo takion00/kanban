@@ -77,6 +77,7 @@ a {
 .content {
   display: flex;
   flex-direction: column;
+  min-height: 90vh;
   gap: 3.2rem;
   grid-area: main;
   background: var(--white);
@@ -136,6 +137,11 @@ a {
   flex-direction: column;
   gap: 2.4rem;
   padding: 1rem 2.4rem;
+  min-height: 50vh;
+}
+
+.dropzone {
+  min-height: 50rem;
 }
 
 .todo-template .all-todos .card-todo {
@@ -145,11 +151,13 @@ a {
   padding: 2.4rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: .5rem;
+
 }
 
 .todo-template .all-todos .card-todo p {
   color: var(--grey-dark);
 }
+
 
 .category {
   display: flex;
@@ -164,6 +172,20 @@ a {
   font-size: 1.4rem;
 }
 
+.is-dragging {
+  cursor: move;
+  opacity: 0.3;
+}
+
+.highlight {
+  background: #50505911;
+}
+
+.over {
+  background-color: #7c3aed18;
+}
+
+
 @media (max-width: 1024px){
 
   .main {
@@ -176,7 +198,4 @@ a {
     flex-direction: column;
   }
 
-  /* .all-todos {
-    width: ;
-  } */
 }
